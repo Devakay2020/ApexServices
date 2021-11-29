@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Web;
+using ApexServices.Models.Data;
+using LoggerDLL.nlogService;
+using NLog;
+
+namespace ApexServices.Models
+{
+    public class ProcessRequest 
+    {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        public static JsonResponse Process(String messageType,String data)
+        {
+
+            IServiceCall call = null;
+            try
+            {
+                call = (IServiceCall)Activator.CreateInstance(Type.GetType("ApexServices.Models.ServiceCall."+messageType));
+            }
+            catch (Exception ex)
+            {
+                LogHelper.FatalException(Log,"Error trying to create an instance of " + messageType,ex);
+                return new JsonResponse(){ServiceName =messageType, Error = string.Format("Could not create instance of {0}",messageType)};
+            }
+
+
+            object parsedJson = null;
+
+            try
+            {
+                parsedJson = call.ParseData(data);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.FatalException(Log, "Error trying to parse the request data into type " + messageType, ex);
+                return new JsonResponse() {ServiceName = messageType, Error = string.Format("Could not parse data into instance of {0}", messageType) };
+            }
+
+
+            try
+            {
+                return call.Process(parsedJson);
+            }
+            catch (Exception ex)
+            {
+                
+                var response= new JsonResponse() { Error = string.Format("Could not process service call for instance of {0} : {1}", messageType,ex.Message) };
+                LogHelper.FatalException(Log, response.Error + messageType, ex);
+                return response;
+            }
+        }
+    }
+}

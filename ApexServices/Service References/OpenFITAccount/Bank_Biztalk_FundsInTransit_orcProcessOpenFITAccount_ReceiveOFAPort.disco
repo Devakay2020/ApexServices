@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://bizdev05/Bank.Biztalk.FundsInTransit.OpenFITAccount/Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.asmx?wsdl" docRef="http://bizdev05/Bank.Biztalk.FundsInTransit.OpenFITAccount/Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://bizdev05/Bank.Biztalk.FundsInTransit.OpenFITAccount/Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.asmx" xmlns:q1="http://Bank.Biztalk.FundsInTransit" binding="q1:Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPortSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://bizdev05/Bank.Biztalk.FundsInTransit.OpenFITAccount/Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.asmx" xmlns:q2="http://Bank.Biztalk.FundsInTransit" binding="q2:Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPortSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

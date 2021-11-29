@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="97ae1d77-1baf-4f9d-8812-881d69fe64f5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.107/IBB.Services.EngageServices.AddOutwardPaymentEngage/IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort.asmx?op=AddOutwardPayment" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort.disco" MetadataType="Disco" ID="1eac5af7-5347-4d57-b9fd-d15d93dbd970" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.AddOutwardPaymentEngage/IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort.asmx?disco" />
+    <MetadataFile FileName="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort.wsdl" MetadataType="Wsdl" ID="051696e4-876d-48d4-b1da-2aea9c57a48e" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.AddOutwardPaymentEngage/IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

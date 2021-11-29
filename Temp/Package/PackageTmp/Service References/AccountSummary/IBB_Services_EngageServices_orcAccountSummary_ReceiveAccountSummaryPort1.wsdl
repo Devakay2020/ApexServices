@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://IBB.Services.CashierServices" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://IBB.Services.CashierServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://IBB.Services.CashierServices">
+      <s:element name="AccountSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountSummaryRequest">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="CustomerNo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountSummaryResponse">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CustomerNumber" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CustomerSummary">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="SFDCID" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerStatus" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerDefaultBranch" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerTitle" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerFirstName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerCardName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerDefaultShortName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerMiddleName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerSurName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerPreviousName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CountryOfResidence" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ParentCountry" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CountryOfBirth" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TownOfBirth" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DateMovedToCurrentAddress" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="FlatNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="HouseNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="HouseName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustSalutation" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AddrLine1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AddrLine2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AddrLine3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AddrLine4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AddrLine5" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerSchoolName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerMotherFamilyName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerIDEvidence" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerIDSerialNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DocumentIssueDate" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EvidenceOfAddress" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DateMovedToPrevAddress" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevAddrFlatNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevAddrHouseName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevAddrHouseNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevAddrLine2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevAddrLine3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevAddrLine4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevAddrLine5" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevAddrFlatNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevAddrHouseName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevAddrHouseNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DateMovedToPrevPrevAddress" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevAddrLine2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevAddrLine3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevAddrLine4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevAddrLine5" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrevPrevPCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DateEmploymentCommenced" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerAddrLine1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerAddrLine2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerAddrLine3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerAddrLine4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerAddrLine5" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerPostCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmployerNatureOfBusiness" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="MobNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TelNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="WorkTelNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PrivateEmail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="WorkEmail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="InternetEnabled" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="HomeDetails" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PropertyEstimatedValue" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CurrentMortgageOutstanding" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NameOfTheLender" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustomerGender" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmploymentType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EmploymentStatus" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AccountOfficer" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PremierStatus" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NoOfChildren" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NetMonthlyIncome" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TotalIncomeBeforeTax" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="HowDidYouHearAboutIBB" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PreferredContactMethod" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="MarketingConsent" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CurrentBankDetailsKeepOpen" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CurrentBankDateAcctOpened" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CurrentBankDateAcctNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CurrentBankSortCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DebitCard" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AmericanExpress" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DinersCard" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="MasterCard" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="VisaCard" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="StoreCard" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CurrentBankDetailsName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CorrespondenceAllAccounts" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DateCustomerAdded" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DateOfLastCustomerTrans" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustDateOfBirth" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="HaveYouEverBeenBankrupt" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ExperianClassificationCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="BusinessCharitySize" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="IVRNominatedAccountNumber" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="IVRNominatedSortCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="IVRNominatedPaymentRef" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="SecondFactorEmail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="SecondFactorMobile" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="SecondFactorLandline" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PEP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RiskCategory" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="AccountSummary">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ExternalAcctNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustNo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="BranchName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctShortName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctDesc" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Ccy" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CcyName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="LedgerBalance" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="StatusBalance" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AvailableBalance" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctDateIofLastEntry" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DateAccountOpened" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Deal" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctBlocked" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctInactive" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctClosed" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EligibleTransferFrom" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EligibleTransferTo" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AcctJoint" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="JointPrimCust" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="JointRelationship" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ElectronicStatements" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="JointAccountHolders" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ProfitRate" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="AccountAttributes">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" name="InstantAccessAccount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="CashISAAccount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="NoticeSavingsAccount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="CurrentAccount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="SavingAccount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DepositAccount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="YoungPersonSavings" type="s:string" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AccountSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:AccountSummary" />
+  </wsdl:message>
+  <wsdl:message name="AccountSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:AccountSummaryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap">
+    <wsdl:operation name="AccountSummary">
+      <wsdl:input message="tns:AccountSummarySoapIn" />
+      <wsdl:output message="tns:AccountSummarySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap" type="tns:IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountSummary">
+      <soap:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPort/AccountSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap12" type="tns:IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountSummary">
+      <soap12:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPort/AccountSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPort">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+    <wsdl:port name="IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap" binding="tns:IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap">
+      <soap:address location="http://bizdev05/IBB.Services.EngageServices.AccountSummary/IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPort.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap12" binding="tns:IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPortSoap12">
+      <soap12:address location="http://bizdev05/IBB.Services.EngageServices.AccountSummary/IBB_Services_EngageServices_orcAccountSummary_ReceiveAccountSummaryPort.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

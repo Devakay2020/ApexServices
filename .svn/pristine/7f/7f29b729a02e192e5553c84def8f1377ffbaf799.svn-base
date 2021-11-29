@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="eecb5d23-e828-4096-977f-41d78a5bfab7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bizdev04:91/IBB.Services.CashierServices.CancelDirectDebit/IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPort.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPort.wsdl" MetadataType="Wsdl" ID="9efb57f2-0f0c-4f92-bfe6-a8610cd07059" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CancelDirectDebit/IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPort.asmx?wsdl" />
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPort.disco" MetadataType="Disco" ID="7460335b-59aa-4419-b8cb-dc7210b00340" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CancelDirectDebit/IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

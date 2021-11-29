@@ -1,0 +1,45 @@
+﻿using System.Web.Script.Serialization;
+using ApexServices.Models.Data;
+using NLog;
+
+namespace ApexServices.Models.ServiceCall
+{
+    public class CashWithdraw : IServiceCall
+    {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        public JsonResponse Process(object data)
+        {
+            var withdrawData = (Models.Data.CashWithdrawRequest) data;
+            var requestData = new ApexServices.CashWithdrawal.CashWithdrawal();
+
+            requestData.AcctNo = withdrawData.AccNo;
+            requestData.EBSUserID = withdrawData.EBSUserId;
+            requestData.MessageID = withdrawData.EBSMessageID;
+            requestData.MessageType = withdrawData.EBSMessageType;
+            requestData.TransactionNarrativeLine1 = withdrawData.Narrative1;
+            requestData.TransactionNarrativeLine2 = withdrawData.Narrative2;
+            requestData.TransactionNarrativeLine3 = withdrawData.Narrative3;
+            requestData.TransactionNarrativeLine4 = withdrawData.Narrative4;
+            requestData.PostToCashAccount = withdrawData.PostToCashAccount;
+            requestData.SourceID = "ENGAGE";
+            requestData.TransactionAmount = withdrawData.TransactionAmount;
+            requestData.TransactionCurrency = withdrawData.TransactionCurrency;
+            requestData.TransactionReference = withdrawData.TransactionReference;
+            requestData.ValueDate = withdrawData.ValueDate;
+            requestData.WorkstationID = Settings.Workstation;
+
+            var requestJson = new JavaScriptSerializer().Serialize(requestData);
+            LogHelper.Trace(Log, "Request data : " + requestJson);
+
+            var client = new ApexServices.CashWithdrawal.BB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPortSoapClient();
+            var returnValue = client.CashWithdrawal(requestData);
+            return new JsonResponse(){Data = returnValue};
+        }
+
+        public object ParseData(string data)
+        {
+            return new JavaScriptSerializer().Deserialize<Models.Data.CashWithdrawRequest>(data);
+        }
+    }
+}

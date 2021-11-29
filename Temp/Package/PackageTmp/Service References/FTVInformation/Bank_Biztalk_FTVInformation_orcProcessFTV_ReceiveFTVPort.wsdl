@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Bank.Biztalk.FTVInformation" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Bank.Biztalk.FTVInformation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Bank.Biztalk.FTVInformation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Bank.Biztalk.FTVInformation">
+      <s:element name="FTV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FTVRequest">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FTVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FTVResponse">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="iAcctNo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="iCurrentValue" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="iFTV" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RemainingTerm" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CurrentRepayment" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FTVSoapIn">
+    <wsdl:part name="parameters" element="tns:FTV" />
+  </wsdl:message>
+  <wsdl:message name="FTVSoapOut">
+    <wsdl:part name="parameters" element="tns:FTVResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap">
+    <wsdl:operation name="FTV">
+      <wsdl:input message="tns:FTVSoapIn" />
+      <wsdl:output message="tns:FTVSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap" type="tns:Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FTV">
+      <soap:operation soapAction="http://Bank.Biztalk.FTVInformation/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort/FTV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap12" type="tns:Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FTV">
+      <soap12:operation soapAction="http://Bank.Biztalk.FTVInformation/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort/FTV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Bank.Biztalk.FTVInformation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+    <wsdl:port name="Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap" binding="tns:Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap">
+      <soap:address location="http://bizdev05/Bank.Biztalk.FTVInformation.FTVEnquiry/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap12" binding="tns:Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap12">
+      <soap12:address location="http://bizdev05/Bank.Biztalk.FTVInformation.FTVEnquiry/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://IBB.Services.CashierServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://IBB.Services.CashierServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.CashierServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://IBB.Services.CashierServices">
+      <s:element name="IssueBankersDraft">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BankersDraftIssuing">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EBSUserID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AcctNo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionCurrency" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ValueDate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ChequeSerialNo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="PayeeName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IssueBankersDraftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IssueBankersDraftResponse">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MsgStatus" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MsgStatusDescription" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseReference" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Dated" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IssueBankersDraftSoapIn">
+    <wsdl:part name="parameters" element="tns:IssueBankersDraft" />
+  </wsdl:message>
+  <wsdl:message name="IssueBankersDraftSoapOut">
+    <wsdl:part name="parameters" element="tns:IssueBankersDraftResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap">
+    <wsdl:operation name="IssueBankersDraft">
+      <wsdl:input message="tns:IssueBankersDraftSoapIn" />
+      <wsdl:output message="tns:IssueBankersDraftSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap" type="tns:IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IssueBankersDraft">
+      <soap:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort/IssueBankersDraft" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap12" type="tns:IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IssueBankersDraft">
+      <soap12:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort/IssueBankersDraft" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.CashierServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+    <wsdl:port name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap" binding="tns:IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap">
+      <soap:address location="http://bizdev04:91/IBB.Services.CashierServices.IssueBankersDraft/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap12" binding="tns:IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap12">
+      <soap12:address location="http://bizdev04:91/IBB.Services.CashierServices.IssueBankersDraft/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

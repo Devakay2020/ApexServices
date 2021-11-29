@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://bizdev05/Bank.Biztalk.FTVInformation.FTVEnquiry/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort.asmx?wsdl" docRef="http://bizdev05/Bank.Biztalk.FTVInformation.FTVEnquiry/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://bizdev05/Bank.Biztalk.FTVInformation.FTVEnquiry/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort.asmx" xmlns:q1="http://Bank.Biztalk.FTVInformation" binding="q1:Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://bizdev05/Bank.Biztalk.FTVInformation.FTVEnquiry/Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPort.asmx" xmlns:q2="http://Bank.Biztalk.FTVInformation" binding="q2:Bank_Biztalk_FTVInformation_orcProcessFTV_ReceiveFTVPortSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

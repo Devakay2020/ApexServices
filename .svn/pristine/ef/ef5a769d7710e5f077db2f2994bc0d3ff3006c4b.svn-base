@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e4de18b2-382c-4619-a7fd-8bf9c8d7ed20" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bizdev04:91/IBB.Services.CashierServices.CashDeposit/IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPort.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPort.wsdl" MetadataType="Wsdl" ID="1b90f0b5-0e34-44b4-a7d6-c1dfd359ccd1" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CashDeposit/IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPort.asmx?wsdl" />
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPort.disco" MetadataType="Disco" ID="e5189845-23a1-4b70-9a67-17403ab042e6" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CashDeposit/IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

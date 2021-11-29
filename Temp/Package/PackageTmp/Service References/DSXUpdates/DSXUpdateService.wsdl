@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Bank.Service.DSXUpdate/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Bank.Service.DSXUpdate/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Bank.Service.DSXUpdate/">
+      <s:element name="UpdateDSX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateRequest" type="tns:DSXUpdateRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DSXUpdateRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentUDI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BufferID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Branch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CaseReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompletionDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateDSXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDSXResult" type="tns:DSXUpdateResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DSXUpdateResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CaseReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentUDI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatesDSX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateRequests" type="tns:DSXUpdateRequests" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DSXUpdateRequests">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DSXUpdRequests" type="tns:ArrayOfDSXUpdateRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDSXUpdateRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DSXUpdateRequest" nillable="true" type="tns:DSXUpdateRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatesDSXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatesDSXResult" type="tns:DSXUpdateResponses" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DSXUpdateResponses">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DSXUpdResponses" type="tns:ArrayOfDSXUpdateResponse" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDSXUpdateResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DSXUpdateResponse" nillable="true" type="tns:DSXUpdateResponse" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateDSXSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDSX" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDSXSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatesDSXSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatesDSX" />
+  </wsdl:message>
+  <wsdl:message name="UpdatesDSXSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatesDSXResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DSXUpdateServiceSoap">
+    <wsdl:operation name="UpdateDSX">
+      <wsdl:input message="tns:UpdateDSXSoapIn" />
+      <wsdl:output message="tns:UpdateDSXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatesDSX">
+      <wsdl:input message="tns:UpdatesDSXSoapIn" />
+      <wsdl:output message="tns:UpdatesDSXSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DSXUpdateServiceSoap" type="tns:DSXUpdateServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateDSX">
+      <soap:operation soapAction="http://Bank.Service.DSXUpdate/UpdateDSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatesDSX">
+      <soap:operation soapAction="http://Bank.Service.DSXUpdate/UpdatesDSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DSXUpdateServiceSoap12" type="tns:DSXUpdateServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateDSX">
+      <soap12:operation soapAction="http://Bank.Service.DSXUpdate/UpdateDSX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatesDSX">
+      <soap12:operation soapAction="http://Bank.Service.DSXUpdate/UpdatesDSX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DSXUpdateService">
+    <wsdl:port name="DSXUpdateServiceSoap" binding="tns:DSXUpdateServiceSoap">
+      <soap:address location="http://appdev01:90/DSXUpdateService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DSXUpdateServiceSoap12" binding="tns:DSXUpdateServiceSoap12">
+      <soap12:address location="http://appdev01:90/DSXUpdateService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

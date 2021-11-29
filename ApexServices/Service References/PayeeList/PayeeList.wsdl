@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://IBB.Services.EngageServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://IBB.Services.EngageServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://IBB.Services.EngageServices">
+      <s:element name="PayeeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPayeeList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CustomerNo" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayeeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPayeeListResponse">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="PayeeList" type="tns:ArrayOfGetPayeeListResponsePayee" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGetPayeeListResponsePayee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Payee">
+            <s:complexType>
+              <s:sequence>
+                <s:element minOccurs="0" maxOccurs="1" name="hostcustomerId" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="PayeeId" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="PayeeName" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="PayeeRef" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="PayerRef" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="PayBranchId" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="PayAcctId" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="Branchname" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bAddress1" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bAddress2" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bCity" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bCounty" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bCountry" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bPostCode" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bPayPhone" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bPaybankName" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bPayBranchAddress1" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bPayBranchAddress2" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="bPayBranchCity" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="IsDomestic" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="IsGlobal" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="NominatedForDebitAcctID" type="s:string" />
+                <s:element minOccurs="0" maxOccurs="1" name="IsNP" type="s:string" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PayeeListSoapIn">
+    <wsdl:part name="parameters" element="tns:PayeeList" />
+  </wsdl:message>
+  <wsdl:message name="PayeeListSoapOut">
+    <wsdl:part name="parameters" element="tns:PayeeListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap">
+    <wsdl:operation name="PayeeList">
+      <wsdl:input message="tns:PayeeListSoapIn" />
+      <wsdl:output message="tns:PayeeListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap" type="tns:IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PayeeList">
+      <soap:operation soapAction="http://IBB.Services.EngageServices/IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPort/PayeeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap12" type="tns:IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PayeeList">
+      <soap12:operation soapAction="http://IBB.Services.EngageServices/IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPort/PayeeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPort">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+    <wsdl:port name="IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap" binding="tns:IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap">
+      <soap:address location="http://localhost:91/IBB.Services.EngageServices.PayeeList/IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPort.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap12" binding="tns:IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPortSoap12">
+      <soap12:address location="http://localhost:91/IBB.Services.EngageServices.PayeeList/IBB_Services_EngageServices_orcPayeeList_ReceivePayeeListRequestPort.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

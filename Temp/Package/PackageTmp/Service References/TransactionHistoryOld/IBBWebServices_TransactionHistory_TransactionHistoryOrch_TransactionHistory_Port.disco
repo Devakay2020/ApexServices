@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://192.168.1.103:91/IBBWebServices.TransactionHistory/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port.asmx?wsdl" docRef="http://192.168.1.103:91/IBBWebServices.TransactionHistory/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://192.168.1.103:91/IBBWebServices.TransactionHistory/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port.asmx" xmlns:q1="http://www.islamic-bank.com/IBBWebServices" binding="q1:IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://192.168.1.103:91/IBBWebServices.TransactionHistory/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port.asmx" xmlns:q2="http://www.islamic-bank.com/IBBWebServices" binding="q2:IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

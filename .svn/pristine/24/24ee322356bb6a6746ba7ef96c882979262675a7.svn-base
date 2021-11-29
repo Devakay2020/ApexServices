@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using ApexServices.TokenService;
+
+namespace ApexServices.Models
+{
+    public class Token
+    {
+        public static string _token { get; set; }
+        public static string _source { get; set; }
+
+        public static bool Check(String source, String token,String address)
+        {
+            return true;
+
+            if (_token != null && _source != null)
+            {
+                if (_token == token && _source == source)
+                    return true;
+            }
+
+
+            var service = new TokenServiceSoapClient();
+            var valid = service.Validate(1, source, token, address, null);
+
+            if (valid)
+            {
+                _token = token;
+                _source = source;
+            }
+            return valid;
+        }
+    }
+}

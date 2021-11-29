@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Serialization;
+using ApexServices.Models.Data;
+using NLog;
+
+namespace ApexServices.Models.ServiceCall
+{
+    public class ChequeDeposit : IServiceCall
+    {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        public JsonResponse Process(object data)
+        {
+
+            var deposit = (Models.Data.ChequeDepositRequest)data;
+
+            var request = new ApexServices.ChequeDeposit.CashChequeDeposit();
+            request.ChequeAmount = deposit.Amount;
+            request.ChequeCurrency = deposit.ChequeCurrency;
+            request.ChequeSerialNo = deposit.SerialNumber; 
+            request.ChequeType = deposit.ChequeType; 
+            request.DepositReference = deposit.DepositReference;
+            request.EBSUserID = deposit.EBSUserId;
+            request.IssuingBank = deposit.IssuingBank;
+            request.MessageID = deposit.EBSMessageID;
+            request.MessageType = deposit.EBSMessageType;
+            request.SourceID = "ENGAGE";
+            request.ValueDate = deposit.ValueDate;
+
+            var requestJson = new JavaScriptSerializer().Serialize(request);
+            LogHelper.Trace(Log, "Request data : " + requestJson);
+
+            var client =
+                new ApexServices.ChequeDeposit.
+                    BB_Services_CashierServices_orcCashChequeDeposit_ReceiveCashChequeDepositRequestPortSoapClient();
+            var returnValue = client.CashChequeDeposit(request);
+            return new JsonResponse() { Data = returnValue };
+        }
+
+        public object ParseData(string data)
+        {
+            return new JavaScriptSerializer().Deserialize<Models.Data.ChequeDepositRequest>(data);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2d9cdb13-c703-45e1-862c-ebba52a2ff2b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.107/Bank.Biztalk.DealsInformation.DealDeposits/Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort.asmx?op=DepositInformation" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort1.wsdl" MetadataType="Wsdl" ID="107c2e62-1848-4d9b-b17c-9e299d61d8ff" SourceId="1" SourceUrl="http://192.168.1.107/Bank.Biztalk.DealsInformation.DealDeposits/Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort.asmx?wsdl" />
+    <MetadataFile FileName="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort1.disco" MetadataType="Disco" ID="1da69171-d07d-48e3-b9d6-70f1da1d2fcc" SourceId="1" SourceUrl="http://192.168.1.107/Bank.Biztalk.DealsInformation.DealDeposits/Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

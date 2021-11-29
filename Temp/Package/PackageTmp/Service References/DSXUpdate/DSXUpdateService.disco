@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://appdev01:90/DSXUpdateService.asmx?wsdl" docRef="http://appdev01:90/DSXUpdateService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://appdev01:90/DSXUpdateService.asmx" xmlns:q1="http://Bank.Service.DSXUpdate/" binding="q1:DSXUpdateServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://appdev01:90/DSXUpdateService.asmx" xmlns:q2="http://Bank.Service.DSXUpdate/" binding="q2:DSXUpdateServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

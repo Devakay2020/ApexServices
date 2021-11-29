@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://IBB.Services.CashierServices" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://IBB.Services.CashierServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://IBB.Services.CashierServices">
+      <s:element name="TransactionHistoryEngage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionHistoryEngage">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TranPeriod" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="NoOfTransactions" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransactionHistoryEngageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionHistoryEngageResponse">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AvailableBalance" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="TransactionDetails">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="CCY" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CCYName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TransactionCode" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="MoneyOut" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="MoneyIn" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TransactionDate" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TransactionValueDate" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="InputBranch" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="PostingGroup" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TransactionReference" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NarrativeLine1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NarrativeLine2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NarrativeLine3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NarrativeLine4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RunningBalance" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DisplayOrder" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="WarningMessage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="MessageCode" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="MoreTransactions">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="MoreTransactionsIndicator" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TransactionHistoryEngageSoapIn">
+    <wsdl:part name="parameters" element="tns:TransactionHistoryEngage" />
+  </wsdl:message>
+  <wsdl:message name="TransactionHistoryEngageSoapOut">
+    <wsdl:part name="parameters" element="tns:TransactionHistoryEngageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap">
+    <wsdl:operation name="TransactionHistoryEngage">
+      <wsdl:input message="tns:TransactionHistoryEngageSoapIn" />
+      <wsdl:output message="tns:TransactionHistoryEngageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap" type="tns:IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TransactionHistoryEngage">
+      <soap:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePort/TransactionHistoryEngage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap12" type="tns:IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TransactionHistoryEngage">
+      <soap12:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePort/TransactionHistoryEngage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePort">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+    <wsdl:port name="IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap" binding="tns:IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap">
+      <soap:address location="http://192.168.1.107/IBB.Services.EngageServices.TransactionHistoryEngage/IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePort.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap12" binding="tns:IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePortSoap12">
+      <soap12:address location="http://192.168.1.107/IBB.Services.EngageServices.TransactionHistoryEngage/IBB_Services_EngageServices_orcTransactionHistoryEngage_ReceiveTransactionHistoryEngagePort.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

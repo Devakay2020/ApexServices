@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://192.168.1.107/Bank.Biztalk.DealsInformation.Finance/Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort.asmx?wsdl" docRef="http://192.168.1.107/Bank.Biztalk.DealsInformation.Finance/Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://192.168.1.107/Bank.Biztalk.DealsInformation.Finance/Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort.asmx" xmlns:q1="http://Bank.Biztalk.DealsInformation" binding="q1:Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPortSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://192.168.1.107/Bank.Biztalk.DealsInformation.Finance/Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort.asmx" xmlns:q2="http://Bank.Biztalk.DealsInformation" binding="q2:Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPortSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

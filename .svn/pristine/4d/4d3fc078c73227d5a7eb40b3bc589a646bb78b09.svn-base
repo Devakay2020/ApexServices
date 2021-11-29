@@ -1,0 +1,37 @@
+﻿using System.Diagnostics;
+using System.Web.Script.Serialization;
+using ApexServices.AccountSummary;
+using ApexServices.Models.Data;
+using NLog;
+
+namespace ApexServices.Models.ServiceCall
+{
+    public class AccountSummary : IServiceCall
+    {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        public JsonResponse Process(object data)
+        {
+            var objData = (AccountSummaryRequest) data;
+            var acc = new IBBAccountSummary { CustomerNo = objData.CustomerId, SourceID = Settings.Source, WorkstationID = Settings.Workstation };
+
+
+
+            var service = new BBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoapClient();
+            var stop = new Stopwatch();
+            stop.Start();
+
+            LogHelper.Info(Log, "Request Data : " + new JavaScriptSerializer().Serialize(objData));
+
+            var returndata = service.AccountSummaryOrch(acc);
+            stop.Stop();
+
+            return new JsonResponse(){ CalloutDuration = stop.ElapsedMilliseconds.ToString(), Data = returndata.AccountSummary};
+        }
+
+        public object ParseData(string data)
+        {
+            return new JavaScriptSerializer().Deserialize<AccountSummaryRequest>(data);
+        }
+    }
+}

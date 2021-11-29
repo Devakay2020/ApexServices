@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1adbfa29-b879-469f-9c27-fc1bd745d05f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bizdev04:91/IBB.Services.CashierServices.CashWithdrawal/IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPort.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPort.disco" MetadataType="Disco" ID="97756422-5c70-47fe-8e0b-a642bc5247a7" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CashWithdrawal/IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPort.asmx?disco" />
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPort.wsdl" MetadataType="Wsdl" ID="a3290af6-6b28-4e8f-bd22-6e6d9b276a0e" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CashWithdrawal/IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPort.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

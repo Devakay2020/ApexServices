@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Script.Serialization;
+using ApexServices.Models;
+using ApexServices.Models.Data;
+using LoggerDLL.nlogService;
+using Newtonsoft.Json;
+using NLog;
+
+namespace ApexServices.Controllers
+{
+    public class JsonPostController : ApiController
+    {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        public JsonResponse Get(String id)
+        {
+            var d = new BaseRequest()
+                    {
+                        ServiceName = id,
+                        Source = "SFDC",
+                        Token = "4f39fe13-e7af-4523-95a2-7d3df9246b98",
+                        User = "Luke"
+                    };
+
+            var s = new JavaScriptSerializer().Serialize(d);
+            return Process(s);
+        }
+
+        public JsonResponse Post([FromBody] string value)
+        {
+            return Process(value);
+        }
+
+        public JsonResponse Process(string value)
+        {
+            var address = ((System.Web.HttpContextWrapper)Request.Properties["MS_HttpContext"]).Request.UserHostAddress;
+            var requestId = Guid.NewGuid().ToString();
+
+
+            MappedDiagnosticsContext.Set("sessionid", requestId);
+
+            var stop = new Stopwatch();
+            stop.Start();
+            var res = new JsonResponse();
+            try
+            {
+                var data = new JavaScriptSerializer().Deserialize<BaseRequest>(value);
+                try
+                {
+                    if (Models.Token.Check(data.Source, data.Token, address))
+                    {
+                        //if (data.RequestId == null)
+
+
+
+                        data.RequestId = requestId;
+
+                        res = ProcessRequest.Process(data.ServiceName, value);
+                        res.ServiceName = data.ServiceName;
+                        res.RequestId = data.RequestId;
+                        
+                    }
+                    else
+                    {
+                        res.Error = "Invalid token/source";
+                        LogHelper.Warn(Log, res.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    res.Error = ex.Message;
+                    if (ex.InnerException != null)
+                        res.Error += ex.InnerException.Message;
+                    LogHelper.FatalException(Log, res.Error, ex);
+                }
+                res.MessageId = data.RequestId;
+            }
+            catch (Exception ex)
+            {
+                res.Error = "Error serializing data:" + value;
+                LogHelper.FatalException(Log,res.Error,ex);
+            }
+
+            stop.Stop();
+            
+            res.Duration = stop.ElapsedMilliseconds.ToString();
+            LogHelper.Trace(Log, "Return object : " + new JavaScriptSerializer().Serialize(res));
+            return res;
+        }
+    }
+}

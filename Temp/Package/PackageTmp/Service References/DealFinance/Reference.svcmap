@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b0b3ac59-6f7e-4284-b070-d449875dfe89" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.107/Bank.Biztalk.DealsInformation.Finance/Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort.asmx?op=FinanceRequest" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort1.wsdl" MetadataType="Wsdl" ID="ffb01ea9-2060-4e3b-90b5-0923b0c79188" SourceId="1" SourceUrl="http://192.168.1.107/Bank.Biztalk.DealsInformation.Finance/Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort.asmx?wsdl" />
+    <MetadataFile FileName="Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort1.disco" MetadataType="Disco" ID="d378bcfd-840f-4034-b949-d560624bcfa6" SourceId="1" SourceUrl="http://192.168.1.107/Bank.Biztalk.DealsInformation.Finance/Bank_Biztalk_DealsInformation_orcProcessFinanceInformation_ReceiveFinanceRequestPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

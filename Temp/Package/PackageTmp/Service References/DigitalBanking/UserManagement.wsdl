@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ebsId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfoResult" type="tns:UserInfoData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserInfoData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EBSId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserEmail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumAttempts" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumBlocks" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastBlock" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StatusNum" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IFMUserId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BarUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ebsId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BarUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BarUserResult" type="tns:UserInfoData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ebsId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionsResult" type="tns:ArrayOfIFMPayment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIFMPayment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IFMPayment" nillable="true" type="tns:IFMPayment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IFMPayment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateReceived" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayBranchNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayAccountNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Memo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateDue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayStatusDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AmountCurrency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UnBarUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ebsId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnBarUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnBarUserResult" type="tns:UserInfoData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnBlock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ebsId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnBlockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnBlockResult" type="tns:UserInfoData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ebsId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResetPasswordResult" type="tns:UserInfoData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetSecret">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ebsId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetSecretResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResetSecretResult" type="tns:UserInfoData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BarUserSoapIn">
+    <wsdl:part name="parameters" element="tns:BarUser" />
+  </wsdl:message>
+  <wsdl:message name="BarUserSoapOut">
+    <wsdl:part name="parameters" element="tns:BarUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnBarUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UnBarUser" />
+  </wsdl:message>
+  <wsdl:message name="UnBarUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UnBarUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnBlockSoapIn">
+    <wsdl:part name="parameters" element="tns:UnBlock" />
+  </wsdl:message>
+  <wsdl:message name="UnBlockSoapOut">
+    <wsdl:part name="parameters" element="tns:UnBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetSecretSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetSecret" />
+  </wsdl:message>
+  <wsdl:message name="ResetSecretSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetSecretResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserManagementSoap">
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoSoapIn" />
+      <wsdl:output message="tns:GetUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BarUser">
+      <wsdl:input message="tns:BarUserSoapIn" />
+      <wsdl:output message="tns:BarUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdl:input message="tns:GetTransactionsSoapIn" />
+      <wsdl:output message="tns:GetTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnBarUser">
+      <wsdl:input message="tns:UnBarUserSoapIn" />
+      <wsdl:output message="tns:UnBarUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnBlock">
+      <wsdl:input message="tns:UnBlockSoapIn" />
+      <wsdl:output message="tns:UnBlockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input message="tns:ResetPasswordSoapIn" />
+      <wsdl:output message="tns:ResetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetSecret">
+      <wsdl:input message="tns:ResetSecretSoapIn" />
+      <wsdl:output message="tns:ResetSecretSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserManagementSoap" type="tns:UserManagementSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BarUser">
+      <soap:operation soapAction="http://tempuri.org/BarUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap:operation soapAction="http://tempuri.org/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBarUser">
+      <soap:operation soapAction="http://tempuri.org/UnBarUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBlock">
+      <soap:operation soapAction="http://tempuri.org/UnBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://tempuri.org/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetSecret">
+      <soap:operation soapAction="http://tempuri.org/ResetSecret" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserManagementSoap12" type="tns:UserManagementSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BarUser">
+      <soap12:operation soapAction="http://tempuri.org/BarUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBarUser">
+      <soap12:operation soapAction="http://tempuri.org/UnBarUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBlock">
+      <soap12:operation soapAction="http://tempuri.org/UnBlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap12:operation soapAction="http://tempuri.org/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetSecret">
+      <soap12:operation soapAction="http://tempuri.org/ResetSecret" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserManagement">
+    <wsdl:port name="UserManagementSoap" binding="tns:UserManagementSoap">
+      <soap:address location="http://localhost/DigitalBanking/UserManagement.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserManagementSoap12" binding="tns:UserManagementSoap12">
+      <soap12:address location="http://localhost/DigitalBanking/UserManagement.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

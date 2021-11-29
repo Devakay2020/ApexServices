@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9a0d0f63-b199-49a0-ad57-e6bc84f957a7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bizdev04:91/IBB.Services.CashierServices.TransactionHistory/IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPort.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPort.disco" MetadataType="Disco" ID="7e7a0563-250a-4918-a022-0d59fbb51561" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.TransactionHistory/IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPort.asmx?disco" />
+    <MetadataFile FileName="IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPort.wsdl" MetadataType="Wsdl" ID="df43d133-5569-4234-ad71-b3163eb95f17" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.TransactionHistory/IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPort.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

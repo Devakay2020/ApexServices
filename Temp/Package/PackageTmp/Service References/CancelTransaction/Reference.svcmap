@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="09ecbf3e-6a17-4f9e-ace2-d5753041d44b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.107/IBB.Services.EngageServices.CancelTransactionEngage/IBB_Services_EngageServices_orcCancelTransactionEngage_ReceiveCancelTransactionRequestPort.asmx?op=CancelTransaction" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_EngageServices_orcCancelTransactionEngage_ReceiveCancelTransactionRequestPort.wsdl" MetadataType="Wsdl" ID="9567d11e-0081-48d3-80bc-5a196983827b" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.CancelTransactionEngage/IBB_Services_EngageServices_orcCancelTransactionEngage_ReceiveCancelTransactionRequestPort.asmx?wsdl" />
+    <MetadataFile FileName="IBB_Services_EngageServices_orcCancelTransactionEngage_ReceiveCancelTransactionRequestPort.disco" MetadataType="Disco" ID="60d103e6-0a78-4936-8bf6-393b98b18fd7" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.CancelTransactionEngage/IBB_Services_EngageServices_orcCancelTransactionEngage_ReceiveCancelTransactionRequestPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

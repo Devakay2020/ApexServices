@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.islamic-bank.com/DataWebService" xmlns:s1="http://www.islamic-bank.com/GetCustomerImages" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://ImagesSchemaResponse.ImagesResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.islamic-bank.com/DataWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/DataWebService">
+      <s:import namespace="http://www.islamic-bank.com/GetCustomerImages" />
+      <s:import namespace="http://ImagesSchemaResponse.ImagesResponse" />
+      <s:element name="GetCustomerImages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:innerMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s2:GetCustomerImagesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/GetCustomerImages">
+      <s:element name="innerMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ImagesSchemaResponse.ImagesResponse">
+      <s:element name="GetCustomerImagesResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerImages" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerImagesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DataWebServiceSoap">
+    <wsdl:operation name="GetCustomerImages">
+      <wsdl:input message="tns:GetCustomerImagesSoapIn" />
+      <wsdl:output message="tns:GetCustomerImagesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataWebServiceSoap" type="tns:DataWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerImages">
+      <soap:operation soapAction="http://www.islamic-bank.com/DataWebService/GetCustomerImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DataWebServiceSoap12" type="tns:DataWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerImages">
+      <soap12:operation soapAction="http://www.islamic-bank.com/DataWebService/GetCustomerImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataWebService">
+    <wsdl:port name="DataWebServiceSoap" binding="tns:DataWebServiceSoap">
+      <soap:address location="http://192.168.1.133/DataWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DataWebServiceSoap12" binding="tns:DataWebServiceSoap12">
+      <soap12:address location="http://192.168.1.133/DataWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.islamic-bank.com/IBBWebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.islamic-bank.com/IBBWebServices/TransactionHistory/FromIBB" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://www.islamic-bank.com/IBBWebServices/TransactionHistory/ToIBB" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.islamic-bank.com/IBBWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBBWebServices.TransactionHistory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ef7a7f2c6938b826" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices">
+      <s:import namespace="http://www.islamic-bank.com/IBBWebServices/TransactionHistory/FromIBB" />
+      <s:import namespace="http://www.islamic-bank.com/IBBWebServices/TransactionHistory/ToIBB" />
+      <s:element name="TransactionHistoryOrch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:IBBTransactionHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransactionHistoryOrchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s2:IBBTransactionHistoryResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices/TransactionHistory/FromIBB">
+      <s:element name="IBBTransactionHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MoreTransactionsIndicator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices/TransactionHistory/ToIBB">
+      <s:element name="IBBTransactionHistoryResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SecurityValidationRoot">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SecurityValidation" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="TransactionDetails">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="CCY" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="CCYName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransactionCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransactionName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransactionType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransactionAmount" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MoneyOut" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MoneyIn" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransactionDate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransactionValueDate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="InputBranch" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PostingGroup" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransactionReference" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NarrativeLine1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NarrativeLine2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NarrativeLine3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NarrativeLine4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RunningBalance" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DisplayOrder" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ErrorMessage" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="WarningMessage" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MessageCode" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MoreTransactions">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MoreTransactionsIndicator" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TransactionHistoryOrchSoapIn">
+    <wsdl:part name="parameters" element="tns:TransactionHistoryOrch" />
+  </wsdl:message>
+  <wsdl:message name="TransactionHistoryOrchSoapOut">
+    <wsdl:part name="parameters" element="tns:TransactionHistoryOrchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap">
+    <wsdl:operation name="TransactionHistoryOrch">
+      <wsdl:input message="tns:TransactionHistoryOrchSoapIn" />
+      <wsdl:output message="tns:TransactionHistoryOrchSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap" type="tns:IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TransactionHistoryOrch">
+      <soap:operation soapAction="http://www.islamic-bank.com/IBBWebServices/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port/TransactionHistoryOrch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap12" type="tns:IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TransactionHistoryOrch">
+      <soap12:operation soapAction="http://www.islamic-bank.com/IBBWebServices/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port/TransactionHistoryOrch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBBWebServices.TransactionHistory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ef7a7f2c6938b826" published web service.</wsdl:documentation>
+    <wsdl:port name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap" binding="tns:IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap">
+      <soap:address location="http://192.168.1.103:91/IBBWebServices.TransactionHistory/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap12" binding="tns:IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap12">
+      <soap12:address location="http://192.168.1.103:91/IBBWebServices.TransactionHistory/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

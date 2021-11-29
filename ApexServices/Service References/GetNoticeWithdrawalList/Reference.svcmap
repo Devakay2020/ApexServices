@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4713c17e-a926-437e-bdb1-78c5044f06a1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.107/IBB.Services.EngageServices.GetNoticeWithdrawalList/IBB_Services_EngageServices_orcGetNoticeWithdrawalList_ReceiveGetNoticeWithdrawalsPort.asmx?op=NoticeWithdrawalList" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_EngageServices_orcGetNoticeWithdrawalList_ReceiveGetNoticeWithdrawalsPort.disco" MetadataType="Disco" ID="f79673f6-8c34-4e32-9e80-d8db703bf77c" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.GetNoticeWithdrawalList/IBB_Services_EngageServices_orcGetNoticeWithdrawalList_ReceiveGetNoticeWithdrawalsPort.asmx?disco" />
+    <MetadataFile FileName="IBB_Services_EngageServices_orcGetNoticeWithdrawalList_ReceiveGetNoticeWithdrawalsPort.wsdl" MetadataType="Wsdl" ID="36cb8356-3fb3-4bc8-80a4-c360a0ca0efc" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.GetNoticeWithdrawalList/IBB_Services_EngageServices_orcGetNoticeWithdrawalList_ReceiveGetNoticeWithdrawalsPort.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

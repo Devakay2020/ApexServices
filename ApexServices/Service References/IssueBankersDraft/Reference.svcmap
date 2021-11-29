@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e36855a8-ba55-476e-9bb5-f0c0d071293f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bizdev04:91/IBB.Services.CashierServices.IssueBankersDraft/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.wsdl" MetadataType="Wsdl" ID="bf994954-4f46-491f-bf59-90acfac5b6ce" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.IssueBankersDraft/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.asmx?wsdl" />
+    <MetadataFile FileName="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.disco" MetadataType="Disco" ID="c322be8e-e266-424e-b917-9133e6bb26cd" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.IssueBankersDraft/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

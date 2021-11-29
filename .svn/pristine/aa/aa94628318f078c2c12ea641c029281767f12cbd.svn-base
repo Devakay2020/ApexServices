@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace ApexServices.Models.Data
+{
+    public class ChequeDepositRequest : EBSBaseRequest
+    {
+        public String Amount { get; set; }
+        public String ChequeCurrency { get; set; }
+        public String SerialNumber { get; set; }
+        public String ChequeType { get; set; }
+        public String DepositReference { get; set; }
+        public String IssuingBank { get; set; }
+        public String ValueDate { get; set; }
+    }
+}

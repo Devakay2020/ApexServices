@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/Bank.Biztalk.FXServices.FXCashWithdrawal/Bank_Biztalk_FXServices_orcProcessFXCashWithdrawal_ReceiveFXCashWithdrawalPort.asmx?wsdl" docRef="http://localhost/Bank.Biztalk.FXServices.FXCashWithdrawal/Bank_Biztalk_FXServices_orcProcessFXCashWithdrawal_ReceiveFXCashWithdrawalPort.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/Bank.Biztalk.FXServices.FXCashWithdrawal/Bank_Biztalk_FXServices_orcProcessFXCashWithdrawal_ReceiveFXCashWithdrawalPort.asmx" xmlns:q1="http://Bank.Biztalk.FXServices" binding="q1:Bank_Biztalk_FXServices_orcProcessFXCashWithdrawal_ReceiveFXCashWithdrawalPortSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/Bank.Biztalk.FXServices.FXCashWithdrawal/Bank_Biztalk_FXServices_orcProcessFXCashWithdrawal_ReceiveFXCashWithdrawalPort.asmx" xmlns:q2="http://Bank.Biztalk.FXServices" binding="q2:Bank_Biztalk_FXServices_orcProcessFXCashWithdrawal_ReceiveFXCashWithdrawalPortSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

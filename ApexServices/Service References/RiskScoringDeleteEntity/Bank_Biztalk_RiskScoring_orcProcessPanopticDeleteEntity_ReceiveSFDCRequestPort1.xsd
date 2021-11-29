@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://Bank.Biztalk.RiskScoring" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://Bank.Biztalk.RiskScoring" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SFDCRiskRequests">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MessageID" type="xs:string" />
+        <xs:element name="MessageType" type="xs:string" />
+        <xs:element name="Opportunity" type="xs:string" />
+        <xs:element name="SourceID" type="xs:string" />
+        <xs:element maxOccurs="unbounded" name="RiskScoreRequest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SFDCID" type="xs:string" />
+              <xs:element name="EBSID" type="xs:string" />
+              <xs:element name="PanopticID" type="xs:string" />
+              <xs:element name="RequestType" type="xs:string" />
+              <xs:element name="EntityType" type="xs:string" />
+              <xs:element name="Gender" type="xs:string" />
+              <xs:element name="Salutation" type="xs:string" />
+              <xs:element name="FirstName" type="xs:string" />
+              <xs:element name="MiddleName" type="xs:string" />
+              <xs:element name="LastName" type="xs:string" />
+              <xs:element name="CompanyName" type="xs:string" />
+              <xs:element name="CountryOfBirth" type="xs:string" />
+              <xs:element name="CountryOfNationality" type="xs:string" />
+              <xs:element name="CountryOfResidence" type="xs:string" />
+              <xs:element name="CustomerType" type="xs:string" />
+              <xs:element name="ShippingCountry" type="xs:string" />
+              <xs:element name="PersonMailingCountry" type="xs:string" />
+              <xs:element name="Branch" type="xs:string" />
+              <xs:element name="Product" type="xs:string" />
+              <xs:element name="OrganisationDomicle" type="xs:string" />
+              <xs:element name="NatureOfBusiness" type="xs:string" />
+              <xs:element name="SizeOfBusiness" type="xs:string" />
+              <xs:element name="Country" type="xs:string" />
+              <xs:element name="EmployementType" type="xs:string" />
+              <xs:element name="NatureOfEmployersYourBusiness" type="xs:string" />
+              <xs:element name="EmployerCountry" type="xs:string" />
+              <xs:element name="Ifdualnationalitycountyoforigin" type="xs:string" />
+              <xs:element name="PEP" type="xs:string" />
+              <xs:element name="VIP" type="xs:string" />
+              <xs:element name="HighNetWorth" type="xs:string" />
+              <xs:element name="UltraHighNetWorth" type="xs:string" />
+              <xs:element name="PEPAssociate" type="xs:string" />
+              <xs:element name="Whatisyourtotalnetworth" type="xs:string" />
+              <xs:element name="InternationalFundTransferFrequency" type="xs:string" />
+              <xs:element name="InternationalFundTransferSource" type="xs:string" />
+              <xs:element name="InternationalFundTransferDestination" type="xs:string" />
+              <xs:element name="HighRiskConnectedCountry1" type="xs:string" />
+              <xs:element name="HighRiskConnectedCountry2" type="xs:string" />
+              <xs:element name="HighRiskConnectedCountry3" type="xs:string" />
+              <xs:element name="NumberOfPEPAssociates" type="xs:string" />
+              <xs:element name="HighRiskInternetBankingLocation1" type="xs:string" />
+              <xs:element name="HighRiskInternetBankingLocation2" type="xs:string" />
+              <xs:element name="HighRiskInternetBankingLocation3" type="xs:string" />
+              <xs:element name="SourceOfWealth" type="xs:string" />
+              <xs:element name="SourceOfFunds" type="xs:string" />
+              <xs:element name="SourseOfFundsCountry" type="xs:string" />
+              <xs:element name="EstimatedMonthlyVolumeInward" type="xs:string" />
+              <xs:element name="EstimatedMonthlyNumberOfTransactionsInward" type="xs:string" />
+              <xs:element name="EstimatedMonthlyVolumeOutward" type="xs:string" />
+              <xs:element name="EstimatedMonthlyNumberOfTransactionsOutward" type="xs:string" />
+              <xs:element name="EstimatedCashWithdrawalFrequency" type="xs:string" />
+              <xs:element name="EstimatedCashDepositFrequency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Bank.Biztalk.DealsInformation" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Bank.Biztalk.DealsInformation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Bank.Biztalk.DealsInformation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Bank.Biztalk.DealsInformation">
+      <s:element name="DepositInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DealDeposits">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Customer" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DealReference" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DepositInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DealDepositsResponse">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Customer" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="AccountInformation">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="DepositsInformation">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" name="DealBranch" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealType" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealRef" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealTypeDesc" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealStartDate" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealMaturityDate" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealCurrency" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealOriginalAmt" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealCurrentAmt" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="MaturityAmount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealPeriodCode" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealPeriodCodeDesc" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealProfitRate" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="AER" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealNextProfitDate" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="DealNextProfitAmount" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="PayProfitSC" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="PayProfitAC" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="PayMaturitySC" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="PayMaturityAC" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="ProfitCapitalised" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="unbounded" name="DealPostings">
+                                <s:complexType>
+                                  <s:sequence>
+                                    <s:element minOccurs="0" maxOccurs="1" name="DealBranch" type="s:string" />
+                                    <s:element minOccurs="0" maxOccurs="1" name="DealType" type="s:string" />
+                                    <s:element minOccurs="0" maxOccurs="1" name="DealRef" type="s:string" />
+                                    <s:element minOccurs="0" maxOccurs="unbounded" name="DealPostingItem">
+                                      <s:complexType>
+                                        <s:sequence>
+                                          <s:element minOccurs="0" maxOccurs="1" name="TranDate" type="s:string" />
+                                          <s:element minOccurs="0" maxOccurs="1" name="TranVDate" type="s:string" />
+                                          <s:element minOccurs="0" maxOccurs="1" name="AcctNo" type="s:string" />
+                                          <s:element minOccurs="0" maxOccurs="1" name="AcctShortName" type="s:string" />
+                                          <s:element minOccurs="0" maxOccurs="1" name="PostingCcy" type="s:string" />
+                                          <s:element minOccurs="0" maxOccurs="1" name="TransactionCode" type="s:string" />
+                                          <s:element minOccurs="0" maxOccurs="1" name="TranName" type="s:string" />
+                                          <s:element minOccurs="0" maxOccurs="1" name="TranAma" type="s:string" />
+                                        </s:sequence>
+                                      </s:complexType>
+                                    </s:element>
+                                  </s:sequence>
+                                </s:complexType>
+                              </s:element>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DepositInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:DepositInformation" />
+  </wsdl:message>
+  <wsdl:message name="DepositInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:DepositInformationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap">
+    <wsdl:operation name="DepositInformation">
+      <wsdl:input message="tns:DepositInformationSoapIn" />
+      <wsdl:output message="tns:DepositInformationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap" type="tns:Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DepositInformation">
+      <soap:operation soapAction="http://Bank.Biztalk.DealsInformation/Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort/DepositInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap12" type="tns:Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DepositInformation">
+      <soap12:operation soapAction="http://Bank.Biztalk.DealsInformation/Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort/DepositInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Bank.Biztalk.DealsInformation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+    <wsdl:port name="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap" binding="tns:Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap">
+      <soap:address location="http://192.168.1.107/Bank.Biztalk.DealsInformation.DealDeposits/Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap12" binding="tns:Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPortSoap12">
+      <soap12:address location="http://192.168.1.107/Bank.Biztalk.DealsInformation.DealDeposits/Bank_Biztalk_DealsInformation_orcProcessDepositInformation_ReceiveDepositPort.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

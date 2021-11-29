@@ -1,0 +1,270 @@
+﻿<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://IBB.Services.CashierServices" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://IBB.Services.CashierServices" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema">
+
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+
+
+  <wsdl:types>
+
+
+    <s:schema targetNamespace="http://IBB.Services.CashierServices" elementFormDefault="qualified">
+
+
+      <s:element name="AccountTransferEngage">
+
+
+        <s:complexType>
+
+
+          <s:sequence>
+
+
+            <s:element name="AccountTransferEngage" maxOccurs="1" minOccurs="0">
+
+
+              <s:complexType>
+
+
+                <s:sequence>
+
+                  <s:element name="SourceID" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="WorkstationID" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="MessageID" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="MessageType" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="EBSUserID" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferType" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferFromAccountNo" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferToAccountNo" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferToSortCode" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferReference" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="BeneficiaryReference" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="BeneficiaryName" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferAmount" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="ExchangeRate" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferDueDate" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="NarrativeLine1" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="NarrativeLine2" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="NarrativeLine3" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="NarrativeLine4" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferCurrency" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="DebitSystemParameter" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="CreditSystemParameter" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="OverrideUser" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="ChargeCode" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="ChargeAmount" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="DebitAccountNumber" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="CreditAccountNumber" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="Spare1" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="Spare2" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="Spare3" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="Spare4" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="Spare5" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="NoticeWithdrawalType" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="NoticeGivenDate" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="NoticeMaturityDate" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="CloseNoticeAccount" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                </s:sequence>
+
+              </s:complexType>
+
+            </s:element>
+
+          </s:sequence>
+
+        </s:complexType>
+
+      </s:element>
+
+
+      <s:element name="AccountTransferEngageResponse">
+
+
+        <s:complexType>
+
+
+          <s:sequence>
+
+
+            <s:element name="AccountTransferEngageResponse" maxOccurs="1" minOccurs="0">
+
+
+              <s:complexType>
+
+
+                <s:sequence>
+
+                  <s:element name="MessageID" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="MessageType" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferReference" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="TransferDueDate" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="WithdrawalAmount" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="MsgStatus" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="MsgStatusDescription" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="ResponseReference" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                  <s:element name="Dated" maxOccurs="1" minOccurs="0" type="s:string"/>
+
+                </s:sequence>
+
+              </s:complexType>
+
+            </s:element>
+
+          </s:sequence>
+
+        </s:complexType>
+
+      </s:element>
+
+    </s:schema>
+
+  </wsdl:types>
+
+
+  <wsdl:message name="AccountTransferEngageSoapIn">
+
+    <wsdl:part name="parameters" element="tns:AccountTransferEngage"/>
+
+  </wsdl:message>
+
+
+  <wsdl:message name="AccountTransferEngageSoapOut">
+
+    <wsdl:part name="parameters" element="tns:AccountTransferEngageResponse"/>
+
+  </wsdl:message>
+
+
+  <wsdl:portType name="IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap">
+
+
+    <wsdl:operation name="AccountTransferEngage">
+
+      <wsdl:input message="tns:AccountTransferEngageSoapIn"/>
+
+      <wsdl:output message="tns:AccountTransferEngageSoapOut"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+
+  <wsdl:binding name="IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap" type="tns:IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap">
+
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+    <wsdl:operation name="AccountTransferEngage">
+
+      <soap:operation style="document" soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePort/AccountTransferEngage"/>
+
+
+      <wsdl:input>
+
+        <soap:body use="literal"/>
+
+      </wsdl:input>
+
+
+      <wsdl:output>
+
+        <soap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+
+  <wsdl:binding name="IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap12" type="tns:IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap">
+
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+    <wsdl:operation name="AccountTransferEngage">
+
+      <soap12:operation style="document" soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePort/AccountTransferEngage"/>
+
+
+      <wsdl:input>
+
+        <soap12:body use="literal"/>
+
+      </wsdl:input>
+
+
+      <wsdl:output>
+
+        <soap12:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+
+  <wsdl:service name="IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePort">
+
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+
+
+    <wsdl:port name="IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap" binding="tns:IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap">
+
+      <soap:address location="http://localhost/IBB.Services.EngageServices.AccountTransferEngage/IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePort.asmx"/>
+
+    </wsdl:port>
+
+
+    <wsdl:port name="IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap12" binding="tns:IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePortSoap12">
+
+      <soap12:address location="http://localhost/IBB.Services.EngageServices.AccountTransferEngage/IBB_Services_EngageServices_orcAccountTransferEngage_ReceiveAccountTransferEngagePort.asmx"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

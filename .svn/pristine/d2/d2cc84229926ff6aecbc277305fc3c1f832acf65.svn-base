@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.islamic-bank.com/IBBWebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.islamic-bank.com/IBBWebServices/AccountSummary/FromIBB" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://www.islamic-bank.com/IBBWebServices/AccountSummary/ToIBB" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.islamic-bank.com/IBBWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBBWebServices.AccountSummary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ef7a7f2c6938b826" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices">
+      <s:import namespace="http://www.islamic-bank.com/IBBWebServices/AccountSummary/FromIBB" />
+      <s:import namespace="http://www.islamic-bank.com/IBBWebServices/AccountSummary/ToIBB" />
+      <s:element name="AccountSummaryOrch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:IBBAccountSummary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountSummaryOrchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s2:IBBAccountSummaryResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices/AccountSummary/FromIBB">
+      <s:element name="IBBAccountSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices/AccountSummary/ToIBB">
+      <s:element name="IBBAccountSummaryResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecurityValidationRoot">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="SecurityValidation" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="AccountSummary">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="IBBAccountNo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ExternalAccountNo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BranchName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountShortName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountDescription" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CCY" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CCYName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="LedgerBalance" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="StatusBalance" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AvailableBalance" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="IsDeal" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountBlocked" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountInactive" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountClosed" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountJoint" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="JointPrimaryCustomer" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="JointRelationship" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EligibleTransferFrom" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EligibleTransferTo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ElectronicStatements" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="WarningMessage" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageCode" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AccountSummaryOrchSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountSummaryOrch" />
+  </wsdl:message>
+  <wsdl:message name="AccountSummaryOrchSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountSummaryOrchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap">
+    <wsdl:operation name="AccountSummaryOrch">
+      <wsdl:input message="tns:AccountSummaryOrchSoapIn" />
+      <wsdl:output message="tns:AccountSummaryOrchSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap" type="tns:IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountSummaryOrch">
+      <soap:operation soapAction="http://www.islamic-bank.com/IBBWebServices/IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_Port/AccountSummaryOrch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap12" type="tns:IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountSummaryOrch">
+      <soap12:operation soapAction="http://www.islamic-bank.com/IBBWebServices/IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_Port/AccountSummaryOrch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_Port">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBBWebServices.AccountSummary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ef7a7f2c6938b826" published web service.</wsdl:documentation>
+    <wsdl:port name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap" binding="tns:IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap">
+      <soap:address location="http://bizdev04:91/IBBWebServices.AccountSummary/IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_Port.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap12" binding="tns:IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap12">
+      <soap12:address location="http://bizdev04:91/IBBWebServices.AccountSummary/IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_Port.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

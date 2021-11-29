@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Serialization;
+using ApexServices.Models.Data;
+using ApexServices.TransactionHistoryOld;
+
+namespace ApexServices.Models.ServiceCall
+{
+    public class TransactionHistory : IServiceCall
+    {
+        public JsonResponse Process(object data)
+        {
+            var requestData = (Models.Data.TransactionHistoryRequest)data;
+
+            var request =
+                new IBBTransactionHistory();//  new ApexServices.TransactionHistory.TransactionHistoryTransactionHistoryRequest();
+            request.SourceID = Settings.Source; //"SFDC";//
+            request.WorkstationID = Settings.Workstation;
+            //request.MessageID = requestData.EBSMessageID;
+            request.MessageType = "TransactionHistory";
+            request.AccountNo = requestData.AccountNumber;
+            request.FromDate = requestData.FromDate;
+            //request.SessionID = requestData.SessionID;
+            request.ToDate = requestData.ToDate;
+            request.TransactionPeriod = requestData.TranPeriod;
+            
+            var client =
+                new BBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoapClient();
+            
+            var returnValue = client.TransactionHistoryOrch(request);
+            
+            return new JsonResponse() { Data = returnValue };
+        }
+
+        public object ParseData(string data)
+        {
+            return new JavaScriptSerializer().Deserialize<Models.Data.TransactionHistoryRequest>(data);
+        }
+    }
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Bank.Biztalk.FXServices" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Bank.Biztalk.FXServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Bank.Biztalk.FXServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Bank.Biztalk.FXServices">
+      <s:element name="FXCashDeposit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FXCashDepositEngage">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DepositCurrency" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ExchangeCurrency" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DepositAmount" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ExchangeAmount" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ExchangeRate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ValueDate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionReference" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionNarrativeLine4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DebitSystemParameter" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CreditSystemParameter" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EBSUserID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="OverrideUser" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DebitAccountNumber" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CreditAccountNumber" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FXCashDepositResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FXCashDepositResponse">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ResponseText" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="TransactionReference" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FXCashDepositSoapIn">
+    <wsdl:part name="parameters" element="tns:FXCashDeposit" />
+  </wsdl:message>
+  <wsdl:message name="FXCashDepositSoapOut">
+    <wsdl:part name="parameters" element="tns:FXCashDepositResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap">
+    <wsdl:operation name="FXCashDeposit">
+      <wsdl:input message="tns:FXCashDepositSoapIn" />
+      <wsdl:output message="tns:FXCashDepositSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap" type="tns:Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FXCashDeposit">
+      <soap:operation soapAction="http://Bank.Biztalk.FXServices/Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPort/FXCashDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap12" type="tns:Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FXCashDeposit">
+      <soap12:operation soapAction="http://Bank.Biztalk.FXServices/Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPort/FXCashDeposit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPort">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Bank.Biztalk.FXServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+    <wsdl:port name="Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap" binding="tns:Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap">
+      <soap:address location="http://localhost/Bank.Biztalk.FXServices.FXCashDeposit/Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPort.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap12" binding="tns:Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPortSoap12">
+      <soap12:address location="http://localhost/Bank.Biztalk.FXServices.FXCashDeposit/Bank_Biztalk_FXServices_orcProcessFXCashDeposit_ReceiveFXCashDepositPort.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

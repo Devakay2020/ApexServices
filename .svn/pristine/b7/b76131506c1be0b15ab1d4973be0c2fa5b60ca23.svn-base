@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Serialization;
+using ApexServices.AccountSummary;
+using ApexServices.Models.Data;
+
+namespace ApexServices.Models.ServiceCall
+{
+    public class AccountTransfer : IServiceCall
+    {
+        public JsonResponse Process(object data)
+        {
+            var objData = (Models.Data.AccountTransferRequest)data;
+            var acc = new ApexServices.AccountTransfer.AccountTransfer();
+            acc.AccountNumber = objData.AccountNumber;
+            acc.BeneficiaryAccountNumber = objData.BeneficiaryAccountNumber;
+            acc.BeneficiarySortCode = objData.BeneficiarySortCode;
+            acc.MessageID = objData.EBSMessageID;
+            acc.MessageType = objData.EBSMessageType;
+            acc.PreDefinedPayee = objData.PreDefinedPayee;
+            acc.PreDefinedPayeeValue = objData.PreDefinedPayeeValue;
+            acc.SessionID = objData.SessionID;
+            acc.SourceID = Settings.Source;
+            acc.TransferAmount = objData.TransferAmount;
+            acc.TransferDueDate = objData.TransferDueDate;
+            acc.TransferNarrativeLine1 = objData.TransferNarrativeLine1;
+            acc.TransferNarrativeLine2 = objData.TransferNarrativeLine2;
+            acc.TransferNarrativeLine3 = objData.TransferNarrativeLine3;
+            acc.TransferReference = objData.TransferReference;
+            acc.TransferType = objData.TransferType;
+            
+            var service =
+                new ApexServices.AccountTransfer.
+                    BB_Services_CashierServices_orcAccountTransfer_ReceiveAccountTransferPortSoapClient();
+            var returndata = service.AccountTransfer(acc);
+
+            return new JsonResponse() { Data = returndata };
+        }
+
+        public object ParseData(string data)
+        {
+            return new JavaScriptSerializer().Deserialize<Models.Data.AccountSummaryRequest>(data);
+        }
+    }
+}

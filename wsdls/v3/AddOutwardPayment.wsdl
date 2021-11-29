@@ -1,0 +1,147 @@
+﻿<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://IBB.Services.CashierServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://IBB.Services.CashierServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://IBB.Services.CashierServices">
+			<s:element name="AddOutwardPayment">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="AddOutwardPaymentEngage">
+							<s:complexType>
+								<s:sequence>
+									<s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="TemplateID" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentType" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SolicitorName" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentAmount" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AmountType" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentTransferMethod" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentPayValueDate" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentRecValueDate" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentCurrency" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="InstructedAmount" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentCharges" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PropertyAddress" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="OrderingCustomerAcct" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="OpportunityID" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="FinanceEBSProductCode" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BeneficiarySortCode" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BeneficiaryAcctNo" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BeneficiaryBIC" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BeneficiaryAddressLine1" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BeneficiaryAddressLine2" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BeneficiaryAddressLine3" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BeneficiaryAddressLine4" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AccountWithInstitutionAcct" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AccountWithInstitutionBIC" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AccountWithInstitutionAddL1" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AccountWithInstitutionAddL2" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AccountWithInstitutionAddL3" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="AccountWithInstitutionAddL4" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SenderToReceiverInfoL1" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SenderToReceiverInfoL2" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SenderToReceiverInfoL3" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SenderToReceiverInfoL4" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SenderToReceiverInfoL5" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="SenderToReceiverInfoL6" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentDetailsLine1" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentDetailsLine2" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentDetailsLine3" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="PaymentDetailsLine4" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="IntermediaryAcct" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="IntermediaryBIC" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="IntermediaryAddressLine1" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="IntermediaryAddressLine2" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="IntermediaryAddressLine3" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="IntermediaryAddressLine4" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="EBSUserID" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="DebitSystemParameter" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="CreditSystemParameter" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="OverrideUser" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="ChargeCode" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="ChargeAmount" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="BankOperationCode" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="ChargesFor" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="DebitAccountNumber" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="CreditAccountNumber" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="Spare1" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="Spare2" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="Spare3" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="Spare4" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="Spare5" type="s:string" />
+								</s:sequence>
+							</s:complexType>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="AddOutwardPaymentResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="AddOutwardPaymentEngageResponse">
+							<s:complexType>
+								<s:sequence>
+									<s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="MsgStatus" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="MsgStatusDescription" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="ResponseReference" type="s:string" />
+									<s:element minOccurs="0" maxOccurs="1" name="Dated" type="s:string" />
+								</s:sequence>
+							</s:complexType>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="AddOutwardPaymentSoapIn">
+		<wsdl:part name="parameters" element="tns:AddOutwardPayment" />
+	</wsdl:message>
+	<wsdl:message name="AddOutwardPaymentSoapOut">
+		<wsdl:part name="parameters" element="tns:AddOutwardPaymentResponse" />
+	</wsdl:message>
+	<wsdl:portType name="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap">
+		<wsdl:operation name="AddOutwardPayment">
+			<wsdl:input message="tns:AddOutwardPaymentSoapIn" />
+			<wsdl:output message="tns:AddOutwardPaymentSoapOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap" type="tns:IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="AddOutwardPayment">
+			<soap:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort/AddOutwardPayment" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap12" type="tns:IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="AddOutwardPayment">
+			<soap12:operation soapAction="http://IBB.Services.CashierServices/IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort/AddOutwardPayment" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort">
+		<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBB.Services.EngageServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a38869872cfb52d" published web service.</wsdl:documentation>
+		<wsdl:port name="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap" binding="tns:IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap">
+			<soap:address location="http://localhost:91/IBB.Services.EngageServices.AddOutwardOutwardPaymentEngage/IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort.asmx" />
+		</wsdl:port>
+		<wsdl:port name="IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap12" binding="tns:IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPortSoap12">
+			<soap12:address location="http://localhost:91/IBB.Services.EngageServices.AddOutwardOutwardPaymentEngage/IBB_Services_EngageServices_orcAddOutwardPaymentEngage_ReceiveAddOutwardPaymentPort.asmx" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b793b11d-70c4-46fe-9cf1-ff59be9aef3f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.107/IBB.Services.EngageServices.CancelNoticeWithdrawal/IBB_Services_EngageServices_orcCancelNoticeWithdrawal_ReceiveCancelNoticeWithdrawalPort.asmx?op=CancelNoticeWithdrawal" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_EngageServices_orcCancelNoticeWithdrawal_ReceiveCancelNoticeWithdrawalPort.wsdl" MetadataType="Wsdl" ID="24270cf6-dd3e-4b0e-a452-f0bd582f685c" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.CancelNoticeWithdrawal/IBB_Services_EngageServices_orcCancelNoticeWithdrawal_ReceiveCancelNoticeWithdrawalPort.asmx?wsdl" />
+    <MetadataFile FileName="IBB_Services_EngageServices_orcCancelNoticeWithdrawal_ReceiveCancelNoticeWithdrawalPort.disco" MetadataType="Disco" ID="64f268ce-62dd-4996-a624-51965ef50c18" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.CancelNoticeWithdrawal/IBB_Services_EngageServices_orcCancelNoticeWithdrawal_ReceiveCancelNoticeWithdrawalPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

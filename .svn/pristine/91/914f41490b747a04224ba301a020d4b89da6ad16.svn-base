@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="131a90c9-111c-4216-8bb7-bb9da73d33f3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bizdev04:91/IBB.Services.CashierServices.CashChequeWithdrawal/IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPort.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPort.wsdl" MetadataType="Wsdl" ID="a5d6492a-a0ac-42c1-a897-3a30c6b1c62b" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CashChequeWithdrawal/IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPort.asmx?wsdl" />
+    <MetadataFile FileName="IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPort.disco" MetadataType="Disco" ID="5354cec1-fa51-4890-babb-f4ae46808725" SourceId="1" SourceUrl="http://bizdev04:91/IBB.Services.CashierServices.CashChequeWithdrawal/IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPort.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

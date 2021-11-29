@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=301879
+  -->
+<configuration>
+  <configSections>
+  </configSections>
+  <appSettings>
+    <add key="webpages:Version" value="3.0.0.0" />
+    <add key="webpages:Enabled" value="false" />
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+  </appSettings>
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.5.1" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation debug="true" targetFramework="4.5.1" />
+    <httpRuntime />
+ 
+    <pages controlRenderingCompatibilityVersion="4.0" />
+  </system.web>
+  <system.webServer>
+    <modules>
+      <add name="NLog" type="NLog.Web.NLogHttpModule, NLog.Extended"/>
+      
+    </modules>
+    
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Optimization" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="1.1.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap" />
+        <binding name="DataWebServiceSoap" maxBufferPoolSize="20000000" maxBufferSize="20000000" maxReceivedMessageSize="20000000">
+          <readerQuotas maxDepth="32" maxStringContentLength="200000000" maxArrayLength="200000000" />
+        </binding>
+        <binding name="IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPortSoap" />
+        <binding name="IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPortSoap" />
+        <binding name="TokenServiceSoap" />
+        <binding name="IBB_Services_CashierServices_orcAccountTransfer_ReceiveAccountTransferPortSoap" />
+        <binding name="IBB_Services_CashierServices_orcCashChequeDeposit_ReceiveCashChequeDepositRequestPortSoap" />
+        <binding name="IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPortSoap" />
+        <binding name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap" />
+        <binding name="IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPortSoap" closeTimeout="00:05:00" sendTimeout="00:25:00" />
+        <binding name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap" />
+        <binding name="IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPortSoap" />
+        <binding name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://192.168.1.103:91/IBBWebServices.AccountSummary/IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_Port.asmx" binding="basicHttpBinding" bindingConfiguration="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap" contract="AccountSummary.IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap" name="IBBWebServices_AccountSummary_AccountSummaryOrch_AccountSummary_PortSoap" />
+      <endpoint address="http://192.168.1.133/DataWebService.asmx" binding="basicHttpBinding" bindingConfiguration="DataWebServiceSoap" contract="svcDataWebservice.DataWebServiceSoap" name="DataWebServiceSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.CashWithdrawal/IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPortSoap" contract="CashWithdrawal.IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPortSoap" name="IBB_Services_CashierServices_orcCashWithdrawal_ReceiveCashWithdrawalRequestPortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.CashDeposit/IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPortSoap" contract="CashDeposit.IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPortSoap" name="IBB_Services_CashierServices_orcCashDeposit_ReceiveCashDepositRequestPortSoap" />
+      <endpoint address="http://192.168.1.133:82/TokenService.asmx" binding="basicHttpBinding" bindingConfiguration="TokenServiceSoap" contract="TokenService.TokenServiceSoap" name="TokenServiceSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.AccountTransfer/IBB_Services_CashierServices_orcAccountTransfer_ReceiveAccountTransferPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcAccountTransfer_ReceiveAccountTransferPortSoap" contract="AccountTransfer.IBB_Services_CashierServices_orcAccountTransfer_ReceiveAccountTransferPortSoap" name="IBB_Services_CashierServices_orcAccountTransfer_ReceiveAccountTransferPortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.CashChequeDeposit/IBB_Services_CashierServices_orcCashChequeDeposit_ReceiveCashChequeDepositRequestPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcCashChequeDeposit_ReceiveCashChequeDepositRequestPortSoap" contract="ChequeDeposit.IBB_Services_CashierServices_orcCashChequeDeposit_ReceiveCashChequeDepositRequestPortSoap" name="IBB_Services_CashierServices_orcCashChequeDeposit_ReceiveCashChequeDepositRequestPortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.CashChequeWithdrawal/IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPortSoap" contract="ChequeWithdrawal.IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPortSoap" name="IBB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.IssueBankersDraft/IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap" contract="IssueBankersDraft.IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap" name="IBB_Services_CashierServices_orcIssueBankersDraft_ReceiveIssueBankersDraftRequestPortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.TransactionHistory/IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPortSoap" contract="TransactionHistory.IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPortSoap" name="IBB_Services_CashierServices_orcTransactionHistory_ReceiveTransactionHistoryPortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBBWebServices.AccountDD/IBBWebServices_AccountDD_AccountDDOrch_AccountDD_Port.asmx" binding="basicHttpBinding" bindingConfiguration="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap" contract="DirectDebit.IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap" name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBB.Services.CashierServices.CancelDirectDebit/IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPort.asmx" binding="basicHttpBinding" bindingConfiguration="IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPortSoap" contract="DirectDebitCancel.IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPortSoap" name="IBB_Services_CashierServices_orcCancelDirectDebit_ReceiveCancelDirectDebitPortSoap" />
+      <endpoint address="http://192.168.1.103:91/IBBWebServices.TransactionHistory/IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_Port.asmx" binding="basicHttpBinding" bindingConfiguration="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap" contract="TransactionHistoryOld.IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap" name="IBBWebServices_TransactionHistory_TransactionHistoryOrch_TransactionHistory_PortSoap" />
+    </client>
+  </system.serviceModel>
+</configuration>

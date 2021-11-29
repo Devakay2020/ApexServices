@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://Bank.Biztalk.RiskScoring" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://Bank.Biztalk.RiskScoring" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SFDCRiskResponses">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MessageType" type="xs:string" />
+        <xs:element name="MessageID" type="xs:string" />
+        <xs:element name="Opportunity" type="xs:string" />
+        <xs:element name="ResponseCode" type="xs:string" />
+        <xs:element name="ResponseMessage" type="xs:string" />
+        <xs:element maxOccurs="unbounded" name="RiskScoreResponse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SFDCID" type="xs:string" />
+              <xs:element name="EBSID" type="xs:string" />
+              <xs:element name="PanopticID" type="xs:string" />
+              <xs:element name="PanopticScore" type="xs:string" />
+              <xs:element name="ResponseCode" type="xs:string" />
+              <xs:element name="ResponseMessage" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

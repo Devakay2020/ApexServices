@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Web;
+
+namespace ApexServices.Models
+{
+    public class Settings
+    {
+        public static String Source
+        {
+            get { return "KIOSK"; }
+        }
+
+        public static String Workstation
+        {
+            get { return "BIZDEV04"; }
+        }
+
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c9e1b508-6538-462a-a399-4dc97d233d62" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.107/IBB.Services.EngageServices.ChequeDeposit/IBB_Services_EngageServices_orcChequeDeposit_ReceiveChequeDepositRequestPort.asmx?op=ChequeDeposit" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IBB_Services_EngageServices_orcChequeDeposit_ReceiveChequeDepositRequestPort1.disco" MetadataType="Disco" ID="b2d0da50-6219-4348-898f-485db2c5db81" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.ChequeDeposit/IBB_Services_EngageServices_orcChequeDeposit_ReceiveChequeDepositRequestPort.asmx?disco" />
+    <MetadataFile FileName="IBB_Services_EngageServices_orcChequeDeposit_ReceiveChequeDepositRequestPort1.wsdl" MetadataType="Wsdl" ID="3b5d342f-eb4c-4b96-8fca-dcb242df0166" SourceId="1" SourceUrl="http://192.168.1.107/IBB.Services.EngageServices.ChequeDeposit/IBB_Services_EngageServices_orcChequeDeposit_ReceiveChequeDepositRequestPort.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

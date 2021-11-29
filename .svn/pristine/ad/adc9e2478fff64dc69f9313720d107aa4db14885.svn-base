@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Helpers;
+using System.Web.Script.Serialization;
+using ApexServices.Models.Data;
+using NLog;
+
+namespace ApexServices.Models.ServiceCall
+{
+    public class ChequeWithdrawal : IServiceCall
+    {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        public JsonResponse Process(object data)
+        {
+            var withdrawal = (Models.Data.ChequeWithdrawalRequest)data;
+
+            var request = new ApexServices.ChequeWithdrawal.ChequeWithdrawal();
+            request.AcctNo = withdrawal.AccNo;
+            request.EBSUserID = withdrawal.EBSUserId;
+            request.MessageID = withdrawal.EBSMessageID;
+            request.MessageType = withdrawal.EBSMessageType;
+            request.ChequeSerialNo = withdrawal.ChequeSerialNo;
+            request.SourceID = "ENGAGE";
+            request.TransactionAmount = withdrawal.TransactionAmount;
+            request.TransactionCurrency = withdrawal.TransactionCurrency; 
+            request.TransactionNarrativeLine1 = withdrawal.Narrative1; 
+            request.TransactionNarrativeLine2 = withdrawal.Narrative2;
+            request.TransactionNarrativeLine3 = withdrawal.Narrative3;
+            request.TransactionNarrativeLine4 = withdrawal.Narrative4;
+            request.TransactionReference = withdrawal.TransactionReference;
+            request.ValueDate = withdrawal.ValueDate;
+            request.WorkstationID = Settings.Workstation;
+
+            var requestJson = new JavaScriptSerializer().Serialize(request);
+            LogHelper.Trace(Log,"Request data : " + requestJson);
+
+            var client =
+                new ApexServices.ChequeWithdrawal.
+                    BB_Services_CashierServices_orcCashChequeWithdrawal_ReceiveCashChequeWithdrawalRequestPortSoapClient
+                    ();
+
+            
+            var returnValue = client.CashChequeWithdrawal(request);
+            return new JsonResponse() { Data = returnValue };
+        }
+
+        public object ParseData(string data)
+        {
+            return new JavaScriptSerializer().Deserialize<Models.Data.ChequeWithdrawalRequest>(data);
+        }
+    }
+}

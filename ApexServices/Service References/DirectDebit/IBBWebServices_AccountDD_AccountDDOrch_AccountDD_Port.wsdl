@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.islamic-bank.com/IBBWebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.islamic-bank.com/IBBWebServices/AccountDD/FromIBB" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.islamic-bank.com/IBBWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBBWebServices.AccountDD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ef7a7f2c6938b826" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices">
+      <s:import namespace="http://www.islamic-bank.com/IBBWebServices/AccountDD/FromIBB" />
+      <s:element name="AccountDDOrch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:IBBAccountDD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountDDOrchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:IBBAccountDDResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.islamic-bank.com/IBBWebServices/AccountDD/FromIBB">
+      <s:element name="IBBAccountDD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkstationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IBBAccountDDResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecurityValidationRoot">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="SecurityValidation" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="DDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="DDInternalRef" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DDOrganisationName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DDOrganisationID" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DDOrganisationRef" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DDStatus" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="LastPaymentDate" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="WarningMessage" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="MessageCode" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AccountDDOrchSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountDDOrch" />
+  </wsdl:message>
+  <wsdl:message name="AccountDDOrchSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountDDOrchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap">
+    <wsdl:operation name="AccountDDOrch">
+      <wsdl:input message="tns:AccountDDOrchSoapIn" />
+      <wsdl:output message="tns:AccountDDOrchSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap" type="tns:IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountDDOrch">
+      <soap:operation soapAction="http://www.islamic-bank.com/IBBWebServices/IBBWebServices_AccountDD_AccountDDOrch_AccountDD_Port/AccountDDOrch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap12" type="tns:IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountDDOrch">
+      <soap12:operation soapAction="http://www.islamic-bank.com/IBBWebServices/IBBWebServices_AccountDD_AccountDDOrch_AccountDD_Port/AccountDDOrch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_Port">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "IBBWebServices.AccountDD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ef7a7f2c6938b826" published web service.</wsdl:documentation>
+    <wsdl:port name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap" binding="tns:IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap">
+      <soap:address location="http://bizdev04:91/IBBWebServices.AccountDD/IBBWebServices_AccountDD_AccountDDOrch_AccountDD_Port.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap12" binding="tns:IBBWebServices_AccountDD_AccountDDOrch_AccountDD_PortSoap12">
+      <soap12:address location="http://bizdev04:91/IBBWebServices.AccountDD/IBBWebServices_AccountDD_AccountDDOrch_AccountDD_Port.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

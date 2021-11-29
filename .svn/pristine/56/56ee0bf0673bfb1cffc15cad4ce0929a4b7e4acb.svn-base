@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace ApexServices.Models.Data
+{
+    public class CashWithdrawRequest : EBSBaseRequest
+    {
+        public String PostToCashAccount { get; set; }
+        public String TransactionAmount { get; set; }
+        public String TransactionReference { get; set; }
+        public String TransactionCurrency { get; set; }
+        public String ValueDate { get; set; }
+        public String AccNo { get; set; }
+        public String Narrative1 { get; set; }
+        public String Narrative2 { get; set; }
+        public String Narrative3 { get; set; }
+        public String Narrative4 { get; set; }
+    }
+}

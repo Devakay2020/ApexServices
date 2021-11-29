@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace ApexServices.Models.Data
+{
+    public class AccountTransferRequest : EBSBaseRequest
+    {
+        public String AccountNumber { get; set; }
+        public String BeneficiaryAccountNumber { get; set; }
+        public String BeneficiarySortCode { get; set; }
+        public String PreDefinedPayee { get; set; }
+        public String PreDefinedPayeeValue { get; set; }
+        public String SessionID { get; set; }
+        public String TransferAmount { get; set; }
+        public String TransferDueDate { get; set; }
+        public String TransferNarrativeLine1 { get; set; }
+        public String TransferNarrativeLine2 { get; set; }
+        public String TransferNarrativeLine3 { get; set; }
+        public String TransferReference { get; set; }
+        public String TransferType { get; set; }
+    }
+}

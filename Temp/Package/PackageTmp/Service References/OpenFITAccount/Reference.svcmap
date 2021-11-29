@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ae8a1ea8-ecae-4a55-bc9a-f4b0604e7a1e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bizdev05/Bank.Biztalk.FundsInTransit.OpenFITAccount/Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.asmx?op=OFA" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.disco" MetadataType="Disco" ID="e51712ec-50ad-4649-b08a-f921e813151b" SourceId="1" SourceUrl="http://bizdev05/Bank.Biztalk.FundsInTransit.OpenFITAccount/Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.asmx?disco" />
+    <MetadataFile FileName="Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.wsdl" MetadataType="Wsdl" ID="04476136-8b45-4d0e-8c5b-ceddf86d6c0c" SourceId="1" SourceUrl="http://bizdev05/Bank.Biztalk.FundsInTransit.OpenFITAccount/Bank_Biztalk_FundsInTransit_orcProcessOpenFITAccount_ReceiveOFAPort.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
